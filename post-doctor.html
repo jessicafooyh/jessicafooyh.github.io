@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Jessica Foo</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Projects</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <a class="dropdown-item" href="post-snek.html">Snek</a>
+                            <a class="dropdown-item" href="post-robot.html">Robot Amok: EKF SLAM</a>
+                            <a class="dropdown-item" href="post-doctor.html">Doctor Visits: NBD</a>
+                            <a class="dropdown-item" href="post-text.html">Texty Luv: LDA</a>
+                            <a class="dropdown-item" href="post-gahmen.html">Gah-men Speak: LSTM</a>
+                            <a class="dropdown-item" href="post-moon.html">Moon Landing: DQN</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/doctor-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Doctor Visits: NBD</h1>
+                        <h2 class="subheading">Heterogeneous doctor visiting behaviour</h2>
+                        <span class="meta">
+                            Posted by
+                            <a href="#">Jessica</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <p>Before all the buzz on machine learning, Statistics relied heavily on different types of distributions to estimate and represent processes in the world. My STAT 476 (Probability Models in Marketing) class focused mainly on capturing heterogeneous effects of purchasing behaviour by mixing different probability distributions. This was my first project submission - using a segmented Negative Binomial Distribution (NBD) model to model the frequency of doctor visits. I've mostly copied and pasted the text below from my submission.</p>
+                    <p>The data came from the Medicaid Consumer Survey conducted in 1986, which surveyed 485 people in total, and included four variables - number of doctor visits in a four-month period, number of children in household, health access and health status. To describe the "data generating process" (DGP), patient behaviour is a one-stage decision-making process governed by a one-inflated model (probability spike at x=1). Within a healthy population, the decision to visit a doctor is governed by a Bernoulli process, and each doctor visit is independently and identically distributed, resulting in a Poisson process for modelling the frequency of doctor visits. We then incorporate a gamma mixing distribution, to account for heterogeneous propensities for individuals. A probability spike at x=1 is also included, to account for mandatory one-time health procedures such as check-ups or immunisations. Furthermore, we can segment the population into sub-populations - healthy, and unhealthy, depending on the health status values provided, and model both segments with the same DGP, but different parameters.</p>
+                    <p>Formal statistical tests like the chi-square goodness-of-fit tests and likelihood ratio tests reveal that the model fits quite well, as the p-values are close to 0.1.</p>
+                    <p>Analysing the models' parameters, we find that the healthy segment exhibits more heterogeneous doctor visiting behaviour as compared to the entire sample due to its lower r parameter. Conversely, the unhealthy segment exhibits more homogeneous doctor visiting behaviour as compared to the entire sample. This is plausible since there is a wider range of doctor visiting behaviour amongst a healthy population, from not visiting at all to visiting frequently due to health conditions such as pregnancy. On the other hand, the unhealthy population is more likely to have similar visiting behaviour – to visit more often. This is evidenced by the unconditional mean of both segments. The healthy segment has an unconditional mean of 1.06 while the unhealthy segment has an unconditional mean of 2.53, more than twice the number.</p>
+                    <p>Another interesting point to note is that the proportion of one-time visitors (spike probability ω) in the healthy segment and unhealthy segment are almost the same, at about 3.7%. This means that the proportion of one-time patients remains the same regardless of health status. Following the same intuition discussed earlier, this is likely because health status does not affect the motivations of one- time visiting behaviour. Instead, one-time visiting behaviour, such as mandatory immunisations or one- time check ups, is almost equally probable in both segments. Nevertheless, both of the probabilities are relatively low, which suggest that not many patients are one-time visitors.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">&copy; JF</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+</body>
+</html>

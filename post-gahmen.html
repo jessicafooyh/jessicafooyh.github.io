@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Jessica Foo</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Projects</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <a class="dropdown-item" href="post-snek.html">Snek</a>
+                            <a class="dropdown-item" href="post-robot.html">Robot Amok: EKF SLAM</a>
+                            <a class="dropdown-item" href="post-doctor.html">Doctor Visits: NBD</a>
+                            <a class="dropdown-item" href="post-text.html">Texty Luv: LDA</a>
+                            <a class="dropdown-item" href="post-gahmen.html">Gah-men Speak: LSTM</a>
+                            <a class="dropdown-item" href="post-moon.html">Moon Landing: DQN</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/gahmen-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Gah-men Speak: LSTM</h1>
+                        <h2 class="subheading">Predicting the Singaporean government's responses</h2>
+                        <span class="meta">
+                            Posted by
+                            <a href="#">Jessica</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <p>Inspired by my friend's <a href="http://www.billcai.com/fake-news.html">project</a> on modelling Straits Times articles, I decided to do the same on various government-produced text in Singapore. Like him, I relied mostly on <a href="https://github.com/hunkim/word-rnn-tensorflow">this</a> word-rnn source code to train a word-based, multi-layer Long-Short Term Memory (LSTM) network on politicians' answers in parliamentary sessions and ministries' press releases. I scraped most of them not actually from Hansard (because I'd then have to spend a lot of time cleaning it), but from individual ministries'/stat boards' News Centres (and focused only on the economic ones). I had only about 4MB of text data in total, which probably explains why a lot of text doesn't make grammatical sense and veers off-topic/seed often. While the generated text is a far cry from the type of answers we demand from our political leaders, I find it really interesting how the model picked up a lot of "government speak" (e.g., 'cost pressures in China', 'good jobs for Singaporeans', 'increase competitiveness'), catch phrases frequently used in government publications, and even the (sometimes convoluted) sentence structures.</p>
+                    <p>Disclaimer: All text below are produced solely by the model, and are not from any official government sources.</p>
+                    <h2 class="section-heading">Seed: "companies"</h2>
+                    <p>companies and more comprehensive importantly, qualitative indicators such as the Middle East and North East food technologies and Chinese Taipei, were expected to between global inflation. As a result, this subsequently reflects previous work had at the exhibition or more flexible or precision medicine relations between assessment and health of their deliveries in their stores and set upon a higher risk profile, exist involving the use of the sectors, the profile of startups. strong energy share in $. billion for SMEs in the same period last year. In particular, about .% of our GDP have grown across . per annum, and developed entrepreneurial company that came into cost pressures in china. Our key growth lies with the IGLS programme. We have set up since each other just lead as a reference risk of customised data to the budget statement in particular the agreement strong innovation capabilities, and prepare from four of our agencies, such as customised workflows for infrastructural projects such as precision engineering, aerospace, or logistics.</p>
+                    <h2 class="section-heading">Seed: "skills"</h2>
+                    <p>skills coordinating and for higher bids and strong interest base, has seen a way this must help the owners to take on the cycles and job search process that is ingrained of this higher way that we can now benefit from diverse initiatives to create good jobs for Singaporeans. These trends often entered into electricity and businesses, as well as investments that support, consumers in three capabilities can look forward for the industry. Calls for firm has also launched close to strong economic efficiency, and the global economy industry programme and a new apex wholesale trade company SPRING's international commodity trading centre with Singapore engineering company, SOE, has been well-received by rapid urbanisation and digitalisation in Asia, but also good projects in achieving good good unemployed continued links there, JTC company is able to absorb retiring participants doing that SIMTech can contribute to Singapore as we strive to succeed in a dynamic which eventually look into the opportunities and skills that can commence operations in the world and the Singapore totalisator board and quantum of money though trains themselves at certain discussions later by providing proper and online facilities. </p>
+                    <h2 class="section-heading">Seed: "inequality"</h2>
+                    <p>inequality investment used the relatively switch help to greater experience through a vibrant economic culture of developing the ELP in Asia and the Middle East, hosted since. In each sector, EMA has secured good progress, with between Singaporeans and Singapore-based companies. Similarly, we have an extensive range of host of these industries, SMEs can bring more. SME centres support and quicker help to years through IGLS design and storage offerings. For example, the prototype consortium has also enjoyed MNCs that are eager to attract people to be incorporated upfront because some of these groups range from freight forwarding, MA increases for seniors in constituencies. We also have clear implications of for the long term. Let me quote in the first two days, and the Singapore dollar of the tech and international AIIB in Latin America, a mix of deep learning platforms which are generally effectively on their productivity. The government also supports long-term protection from our insurance banks in order to maximise our energy, space and capabilities and opportunities for our people. Schemes our local enterprises are adopting opportunities, government agencies also continue to work with technology to increase the competitiveness of our enterprises.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">&copy; JF</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+</body>
+</html>

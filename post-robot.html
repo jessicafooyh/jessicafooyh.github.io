@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Jessica Foo</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Projects</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <a class="dropdown-item" href="post-snek.html">Snek</a>
+                            <a class="dropdown-item" href="post-robot.html">Robot Amok: EKF SLAM</a>
+                            <a class="dropdown-item" href="post-doctor.html">Doctor Visits: NBD</a>
+                            <a class="dropdown-item" href="post-text.html">Texty Luv: LDA</a>
+                            <a class="dropdown-item" href="post-gahmen.html">Gah-men Speak: LSTM</a>
+                            <a class="dropdown-item" href="post-moon.html">Moon Landing: DQN</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/robot-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Robot Amok: EKF-SLAM</h1>
+                        <h2 class="subheading">Modeling uncertainty in robotic motion</h2>
+                        <span class="meta">
+                            Posted by
+                            <a href="#">Jessica</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <p>This was one of the class assignments I quite enjoyed working on at a grad level course at the Toyota Technological Institute of Chicago (TTIC), TTIC 31170 - Planning, Learning and Estimation for Robotics and Artificial Intelligence, by Professor Walter. To be frank, I thoroughly enjoyed this course - it exposed me to a class of algorithms I hadn't learned in my statistics courses (i.e., reinforcement learning) and amidst all the theoretical homework I'd to do for my Statistics courses, this was a breath of fresh air - I got to spend hours just coding, and seeing probabilistic equations come to live.</p>
+                    <p>For this project, we had to use the Extended Kalman Filter and Simultaneous Localisation and Mapping (EKF-SLAM) to jointly estimate a robot's position, as well as objects around it, given noisy measurements from a sensor like a camera and known robotic movement (e.g., a robot can only move 5cm from its current position in a second). The green dot represents the robot's ground-truth pose, and the green X-es are the true locations of the objects around it. The red and black dots are our estimates of the robot's pose and object locations respectively, after accounting for uncertainty from the robot's movement and measurement (sensors). The colourful circles represent our range of uncertainty about the estimates (something like confidence intervals). As the robot explores more of the area around it, the variance estimates shrink (circles become smaller), because we become more confident of the locations of the objects around it.</p>
+                    <iframe src="https://player.vimeo.com/video/270814086" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </article>
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">&copy; JF</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+</body>
+</html>
