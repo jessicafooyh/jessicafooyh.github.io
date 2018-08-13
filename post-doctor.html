@@ -76,6 +76,8 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <p>Before all the buzz on machine learning, Statistics relied heavily on different types of distributions to estimate and represent processes in the world. My STAT 476 (Probability Models in Marketing) class focused mainly on capturing heterogeneous effects of purchasing behaviour by mixing different probability distributions. This was my first project submission - using a segmented Negative Binomial Distribution (NBD) model to model the frequency of doctor visits. I've mostly copied and pasted the text below from my submission.</p>
                     <p>The data came from the Medicaid Consumer Survey conducted in 1986, which surveyed 485 people in total, and included four variables - number of doctor visits in a four-month period, number of children in household, health access and health status. To describe the "data generating process" (DGP), patient behaviour is a one-stage decision-making process governed by a one-inflated model (probability spike at x=1). Within a healthy population, the decision to visit a doctor is governed by a Bernoulli process, and each doctor visit is independently and identically distributed, resulting in a Poisson process for modelling the frequency of doctor visits. We then incorporate a gamma mixing distribution, to account for heterogeneous propensities for individuals. A probability spike at x=1 is also included, to account for mandatory one-time health procedures such as check-ups or immunisations. Furthermore, we can segment the population into sub-populations - healthy, and unhealthy, depending on the health status values provided, and model both segments with the same DGP, but different parameters.</p>
+                    <img class="img-fluid" src="img/posts/doctor2.png" alt="">
+                    <img class="img-fluid" src="img/posts/doctor1.png" alt="">
                     <p>Formal statistical tests like the chi-square goodness-of-fit tests and likelihood ratio tests reveal that the model fits quite well, as the p-values are close to 0.1.</p>
                     <p>Analysing the models' parameters, we find that the healthy segment exhibits more heterogeneous doctor visiting behaviour as compared to the entire sample due to its lower r parameter. Conversely, the unhealthy segment exhibits more homogeneous doctor visiting behaviour as compared to the entire sample. This is plausible since there is a wider range of doctor visiting behaviour amongst a healthy population, from not visiting at all to visiting frequently due to health conditions such as pregnancy. On the other hand, the unhealthy population is more likely to have similar visiting behaviour – to visit more often. This is evidenced by the unconditional mean of both segments. The healthy segment has an unconditional mean of 1.06 while the unhealthy segment has an unconditional mean of 2.53, more than twice the number.</p>
                     <p>Another interesting point to note is that the proportion of one-time visitors (spike probability ω) in the healthy segment and unhealthy segment are almost the same, at about 3.7%. This means that the proportion of one-time patients remains the same regardless of health status. Following the same intuition discussed earlier, this is likely because health status does not affect the motivations of one- time visiting behaviour. Instead, one-time visiting behaviour, such as mandatory immunisations or one- time check ups, is almost equally probable in both segments. Nevertheless, both of the probabilities are relatively low, which suggest that not many patients are one-time visitors.</p>
@@ -91,23 +93,23 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/yi-hui-jessica-foo-9683aa6a/">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">
+                            <a href="http://www.instagram.com/fyhyhyh">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">
+                            <a href="https://github.com/jessicafooyh">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
