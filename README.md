@@ -1,4 +1,4 @@
-# [Jessica Foo]
+# Portfolio Page
 
 This page is adapted from and credited to [Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/), a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). 
 
